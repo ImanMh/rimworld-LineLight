@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingDef ParentName="LampBase">
+    <defName>LaneLight</defName>
+    <label>Lane Light</label>
+    <description>A flat strong lamp that provides little ligth for the road.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <graphicData>
+      <texPath>Things/Buildings/LaneLight/LaneLight</texPath>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
+    <uiOrder>2990</uiOrder>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5</basePowerConsumption>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+    <passability>Standable</passability>
+    <pathCost>1</pathCost>
+  </ThingDef>
+</Defs>
